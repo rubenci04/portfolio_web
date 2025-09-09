@@ -1,0 +1,82 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem;
+  text-align: center; /* Centrado por defecto para móviles */
+  min-height: 90vh;
+  background-color: var(--dark-blue);
+}
+
+/* Nuevo contenedor para el texto y la imagen, usando flexbox para layout horizontal */
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column; /* Por defecto en columna para móviles */
+  align-items: center;
+  gap: 3rem; /* Espacio entre el texto y la imagen */
+  max-width: 1200px;
+  width: 100%;
+}
+
+@media (min-width: 768px) { /* A partir de tablets, los ponemos en fila */
+  .hero-content-wrapper {
+    flex-direction: row;
+    text-align: left; /* Alineo el texto a la izquierda en pantallas grandes */
+    justify-content: space-around; /* Espacio entre los elementos */
+  }
+}
+
+.hero-text-content { /* Nuevo nombre para el div de texto */
+  max-width: 600px; /* Limito el ancho del texto */
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  color: var(--yellow);
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #d4a237;
+}
+
+/* Estilos para mi contenedor de imagen */
+.hero-image-container {
+  width: 250px; /* Tamaño de la imagen */
+  height: 250px;
+  border-radius: 50%; /* La hago circular */
+  overflow: hidden; /* Corta lo que se salga del círculo */
+  border: 5px solid var(--yellow); /* Un borde con mi color de acento */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Una sombra sutil */
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+}

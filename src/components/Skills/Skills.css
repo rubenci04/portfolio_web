@@ -1,0 +1,52 @@
+/* --- Estilos para la sección de Skills --- */
+
+.skills-container {
+  padding: 4rem 2rem;
+  background-color: var(--dark-blue); /* Color de fondo consistente */
+  text-align: center;
+}
+
+.skills-section-title {
+  font-size: 2.5rem;
+  color: var(--yellow);
+  margin-bottom: 3rem;
+}
+
+/* 1. Cuadrícula para los iconos */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 2. Estilo de cada tarjeta de habilidad individual */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d3549; /* Fondo de tarjeta slightly lighter */
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid transparent; /* Borde inicial transparente */
+  transition: border-color 0.3s ease;
+}
+
+/* 3. Estilo del icono en sí (tamaño) */
+.skill-icon {
+  font-size: 4rem; /* Tamaño grande para el logo */
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+/* Opcional: Borde de color al hacer hover (complementa la animación de framer-motion) */
+.skill-item:hover {
+  border-color: var(--yellow);
+}

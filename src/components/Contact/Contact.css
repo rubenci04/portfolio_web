@@ -1,0 +1,160 @@
+/* Asegúrate de tener estas variables de color globales */
+:root {
+  --primary-bg-color: #121F35; 
+  --secondary-bg-color: #1A2B43; 
+  --accent-color: #FFC107; 
+  --text-color-light: #E0E0E0; 
+  --whatsapp-color: #25D366; /* Color de WhatsApp */
+  --white: #FFFFFF;
+}
+
+.contact-container {
+  padding: 4rem 2rem;
+  background-color: var(--secondary-bg-color); /* Fondo ligeramente diferente al Hero */
+  text-align: center;
+}
+
+.contact-section-title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: var(--text-color-light);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column; /* Por defecto en columna */
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilos del formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--primary-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-light);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #444;
+  background-color: #1A2B43;
+  color: var(--text-color-light);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3);
+}
+
+.submit-button {
+  padding: 1rem 2rem;
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color); /* Texto oscuro para el botón de enviar */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.success-message {
+  color: var(--whatsapp-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #ff4d4d; /* Rojo para errores */
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para el nuevo botón de WhatsApp */
+.whatsapp-contact {
+  padding: 2rem;
+  background-color: var(--primary-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.whatsapp-contact h3 {
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background-color: var(--whatsapp-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Media Query para Contacto (para poner form y whatsapp en fila en desktop) */
+@media (min-width: 769px) {
+  .contact-content {
+    flex-direction: row; /* En desktop, el formulario y WhatsApp van lado a lado */
+    align-items: flex-start; /* Alinea arriba si uno es más alto */
+  }
+
+  .contact-form-wrapper,
+  .whatsapp-contact {
+    flex: 1; /* Para que ocupen el espacio disponible */
+  }
+}

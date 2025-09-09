@@ -1,0 +1,126 @@
+/* Variables de color globales, asegúrate de que estén en tu index.css o App.css */
+:root {
+  --primary-bg-color: #121F35; /* Un azul oscuro más profundo */
+  --secondary-bg-color: #1A2B43; /* Un azul ligeramente más claro para secciones */
+  --accent-color: #FFC107; /* Amarillo vibrante para acentos (botón, hover) */
+  --text-color-light: #E0E0E0; /* Texto claro para contraste */
+  --text-color-dark: #333333; /* Texto oscuro si se necesita */
+  --white: #FFFFFF;
+}
+
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--primary-bg-color); /* Fondo oscuro principal */
+  color: var(--text-color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color); /* El logo en amarillo vibrante */
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative; /* Para el efecto de subrayado */
+  transition: color 0.3s ease;
+}
+
+/* Efecto de subrayado animado al pasar el ratón */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: var(--accent-color); /* Cambio de color al hover */
+}
+
+.navbar-links li a:hover::after {
+  width: 100%; /* El subrayado se extiende */
+}
+
+/* --- Menú Hamburguesa (Responsive) --- */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 1001; /* Asegura que esté por encima del menú abierto */
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--accent-color); /* Barras en color de acento */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%; /* Justo debajo de la navbar */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--primary-bg-color); /* Mismo fondo que la navbar */
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+
+  .navbar-links li a {
+    font-size: 1.2rem;
+  }
+  
+  /* Deshabilito el subrayado animado en móviles para simplicidad */
+  .navbar-links li a::after {
+    display: none;
+  }
+  .navbar-links li a:hover::after {
+    width: 0;
+  }
+}

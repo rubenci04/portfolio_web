@@ -1,0 +1,31 @@
+/*
+  En este archivo definimos los estilos que se aplicarán a toda la página.
+  Usamos :root para declarar variables de CSS que podremos reutilizar en
+  todos nuestros componentes. Esto facilita mantener una paleta de colores consistente.
+*/
+:root {
+  --dark-blue: #223f54; /* Tu color principal oscuro */
+  --yellow: #f6bf4a;     /* Tu color de acento */
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/*
+  Reseteo básico para eliminar márgenes y paddings por defecto de los navegadores,
+  y para que el cálculo del tamaño de las cajas (box-sizing) sea más intuitivo.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Estilos generales para el cuerpo de la página (body).
+  Definimos la fuente, el color de fondo principal y el color del texto.
+*/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
