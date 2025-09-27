@@ -54,7 +54,7 @@ const projectsData = [
     description: 'Mi portfolio personal, donde aplico las mejores prácticas de desarrollo frontend. Construido con React y Vite, y estilizado con CSS puro y animaciones con Framer Motion, este proyecto es una demostración de mis habilidades en la creación de interfaces de usuario modernas y atractivas.',
     technologies: ['React', 'Vite', 'CSS', 'Framer Motion'],
     linkGitHub: 'https://github.com/rubenci04',
-    linkDemo: ''
+    linkDemo: 'https://portfoliorubenweb.netlify.app'
   }
 ];
 
