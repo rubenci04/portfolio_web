@@ -7,11 +7,11 @@ import './Footer.css';
 const Footer = () => {
   // --- Mis notas sobre configuración de enlaces ---
   // 2. Defino mis enlaces personales. Debo reemplazar estos valores.
-  const githubUrl = "https://github.com/tu-usuario"; // Reemplazar con tu URL de GitHub
-  const linkedinUrl = "https://linkedin.com/in/tu-usuario"; // Reemplazar con tu URL de LinkedIn
+  const githubUrl = "https://github.com/rubenci04"; // Reemplazar con tu URL de GitHub
+  const linkedinUrl = "https://www.linkedin.com/in/rubenalbarra/"; // Reemplazar con tu URL de LinkedIn
   
   // 3. Lógica para el enlace de WhatsApp (reutilizo la lógica de la sección de contacto).
-  const whatsappNumber = '5491112345678'; // Reemplazar con tu número real (código país + número)
+  const whatsappNumber = '+543812495381'; // Reemplazar con tu número real (código país + número)
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (

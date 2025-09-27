@@ -10,43 +10,51 @@ import './Projects.css';
 const projectsData = [
   {
     id: 1,
-    title: 'Gestor de Pedidos Pizzería',
-    description: 'Sistema web para la toma de pedidos online y administración interna. El frontend permite a los clientes armar su pedido y el backend gestiona el inventario.',
-    technologies: ['React', 'Node.js', 'CSS Modules', 'MongoDB'],
-    linkGitHub: 'https://github.com/tu-usuario/proyecto-pizzeria-react', // Reemplazar con tu URL real
-    linkDemo: 'https://demo-pizzeria.netlify.app' // Reemplazar con tu URL real
+    title: 'App Ventas y Gestion de Kiosco',
+    description: 'Sistema integral de gestión para kioscos, desarrollado con React y Node.js. Permite la toma de pedidos en línea, administración de inventario y seguimiento de ventas. Una solución completa para optimizar la operación de pequeños comercios.',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    linkGitHub: 'https://github.com/rubenci04',
+    linkDemo: 'https://buchigestionkiosco.onrender.com/auth/login'
   },
   {
     id: 2,
-    title: 'API RESTful para Tareas',
-    description: 'Backend robusto desarrollado con Python y Flask para un administrador de tareas simple. Incluye autenticación de usuarios y operaciones CRUD completas.',
-    technologies: ['Python', 'tkinter'],
-    linkGitHub: 'https://github.com/tu-usuario/api-flask-tareas',
-    linkDemo: 'https://trinket.io/pygame/64ac6336fa4c?showInstructions=true' 
+    title: 'Esteticars Monteros',
+    description: 'Landing page moderna y atractiva para un centro de estética vehicular, construida con React. Su diseño responsive garantiza una experiencia de usuario óptima en cualquier dispositivo, presentando los servicios de forma clara y profesional.',
+    technologies: ['React', 'JavaScript', 'CSS'],
+    linkGitHub: 'https://github.com/rubenci04',
+    linkDemo: 'https://esteticars-monteros.vercel.app/'
   },
   {
     id: 3,
-    title: 'Portfolio Anterior con Vue.js',
-    description: 'Versión inicial de mi portfolio personal desarrollada con Vue.js para explorar sus directivas reactivas y ecosistema.',
-    technologies: ['Vue.js', 'JavaScript ES6+', 'Sass'],
-    linkGitHub: 'https://github.com/tu-usuario/portfolio-vue',
-    linkDemo: 'https://demo-portfolio-vue.netlify.app'
+    title: 'Don Enrique Web',
+    description: 'Sitio web para un emprendimiento local, desarrollado con Vue.js. Demuestra mi capacidad para construir interfaces dinámicas y reactivas, adaptándome a diferentes frameworks de JavaScript para entregar soluciones a medida.',
+    technologies: ['Vue.js', 'JavaScript', 'Sass'],
+    linkGitHub: 'https://github.com/rubenci04',
+    linkDemo: 'https://donenriqueweb.netlify.app'
   },
   {
     id: 4,
-    title: 'Portfolio Anterior con Vue.js',
-    description: 'Versión inicial de mi portfolio personal desarrollada con Vue.js para explorar sus directivas reactivas y ecosistema.',
-    technologies: ['Vue.js', 'JavaScript ES6+', 'Sass'],
-    linkGitHub: 'https://github.com/tu-usuario/portfolio-vue',
-    linkDemo: 'https://demo-portfolio-vue.netlify.app'
+    title: 'App Python',
+    description: 'Aplicación de escritorio creada con Python y la librería Tkinter. Este proyecto demuestra mis habilidades en el desarrollo de software de escritorio y mi conocimiento del lenguaje Python más allá del desarrollo web.',
+    technologies: ['Python', 'Tkinter'],
+    linkGitHub: 'https://github.com/rubenci04',
+    linkDemo: 'https://trinket.io/pygame/64ac6336fa4c?showInstructions=true'
   },
   {
     id: 5,
-    title: 'Portfolio Anterior con Vue.js',
-    description: 'Versión inicial de mi portfolio personal desarrollada con Vue.js para explorar sus directivas reactivas y ecosistema.',
-    technologies: ['Vue.js', 'JavaScript ES6+', 'Sass'],
-    linkGitHub: 'https://github.com/tu-usuario/portfolio-vue',
-    linkDemo: 'https://demo-portfolio-vue.netlify.app'
+    title: 'Emprendimiento de Tejido',
+    description: 'E-commerce en desarrollo para un emprendimiento de tejidos a crochet. El proyecto incluirá un catálogo de productos, carrito de compras y pasarela de pagos, demostrando mi capacidad para construir soluciones de comercio electrónico completas.',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    linkGitHub: 'https://github.com/rubenci04',
+    linkDemo: ''
+  },
+  {
+    id: 6,
+    title: 'Portfolio Actual',
+    description: 'Mi portfolio personal, donde aplico las mejores prácticas de desarrollo frontend. Construido con React y Vite, y estilizado con CSS puro y animaciones con Framer Motion, este proyecto es una demostración de mis habilidades en la creación de interfaces de usuario modernas y atractivas.',
+    technologies: ['React', 'Vite', 'CSS', 'Framer Motion'],
+    linkGitHub: 'https://github.com/rubenci04',
+    linkDemo: ''
   }
 ];
 
