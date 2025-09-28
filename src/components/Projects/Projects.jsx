@@ -13,6 +13,7 @@ const projectsData = [
     title: 'App Ventas y Gestion de Kiosco',
     description: 'Sistema integral de gestión para kioscos, desarrollado con React y Node.js. Permite la toma de pedidos en línea, administración de inventario y seguimiento de ventas. Una solución completa para optimizar la operación de pequeños comercios.',
     technologies: ['React', 'Node.js', 'MongoDB'],
+    imageUrl: 'https://via.placeholder.com/400x250.png?text=Gestion+Kiosco',
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://buchigestionkiosco.onrender.com/auth/login'
   },
@@ -21,6 +22,7 @@ const projectsData = [
     title: 'Esteticars Monteros',
     description: 'Landing page moderna y atractiva para un centro de estética vehicular, construida con React. Su diseño responsive garantiza una experiencia de usuario óptima en cualquier dispositivo, presentando los servicios de forma clara y profesional.',
     technologies: ['React', 'JavaScript', 'CSS'],
+    imageUrl: 'https://via.placeholder.com/400x250.png?text=Esteticars+Monteros',
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://esteticars-monteros.vercel.app/'
   },
@@ -29,6 +31,7 @@ const projectsData = [
     title: 'Don Enrique Web',
     description: 'Sitio web para un emprendimiento local, desarrollado con Vue.js. Demuestra mi capacidad para construir interfaces dinámicas y reactivas, adaptándome a diferentes frameworks de JavaScript para entregar soluciones a medida.',
     technologies: ['Vue.js', 'JavaScript', 'Sass'],
+    imageUrl: 'https://via.placeholder.com/400x250.png?text=Don+Enrique+Web',
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://donenriqueweb.netlify.app'
   },
@@ -37,6 +40,7 @@ const projectsData = [
     title: 'App Python',
     description: 'Aplicación de escritorio creada con Python y la librería Tkinter. Este proyecto demuestra mis habilidades en el desarrollo de software de escritorio y mi conocimiento del lenguaje Python más allá del desarrollo web.',
     technologies: ['Python', 'Tkinter'],
+    imageUrl: 'https://via.placeholder.com/400x250.png?text=App+Python',
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://trinket.io/pygame/64ac6336fa4c?showInstructions=true'
   },
@@ -45,6 +49,7 @@ const projectsData = [
     title: 'Emprendimiento de Tejido',
     description: 'E-commerce en desarrollo para un emprendimiento de tejidos a crochet. El proyecto incluirá un catálogo de productos, carrito de compras y pasarela de pagos, demostrando mi capacidad para construir soluciones de comercio electrónico completas.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    imageUrl: 'https://via.placeholder.com/400x250.png?text=E-commerce+Tejido',
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: ''
   },
@@ -53,6 +58,7 @@ const projectsData = [
     title: 'Portfolio Actual',
     description: 'Mi portfolio personal, donde aplico las mejores prácticas de desarrollo frontend. Construido con React y Vite, y estilizado con CSS puro y animaciones con Framer Motion, este proyecto es una demostración de mis habilidades en la creación de interfaces de usuario modernas y atractivas.',
     technologies: ['React', 'Vite', 'CSS', 'Framer Motion'],
+    imageUrl: 'https://via.placeholder.com/400x250.png?text=Mi+Portfolio',
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://portfoliorubenweb.netlify.app'
   }
@@ -117,34 +123,39 @@ const Projects = () => {
             variants={cardVariants}
             whileHover={{ scale: 1.03, y: -5 }}
           >
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-
-            <div className="project-technologies">
-              {project.technologies.map((tech, i) => (
-                <motion.span
-                  key={i}
-                  className="tech-tag"
-                  variants={techTagVariants}
-                  whileHover="hover"
-                >
-                  {tech}
-                </motion.span>
-              ))}
+            <div className="project-image-container">
+              <img src={project.imageUrl} alt={`Miniatura del proyecto ${project.title}`} className="project-image" />
             </div>
+            <div className="project-card-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
 
-            {/* 6. Sección de enlaces externos para cada proyecto. */}
-            <div className="project-links">
-              {project.linkDemo && (
-                <a href={project.linkDemo} target="_blank" rel="noopener noreferrer" className="project-link-button">
-                  Ver Demo
-                </a>
-              )}
-              {project.linkGitHub && (
-                <a href={project.linkGitHub} target="_blank" rel="noopener noreferrer" className="project-link-button secondary">
-                  Ver Código
-                </a>
-              )}
+              <div className="project-technologies">
+                {project.technologies.map((tech, i) => (
+                  <motion.span
+                    key={i}
+                    className="tech-tag"
+                    variants={techTagVariants}
+                    whileHover="hover"
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* 6. Sección de enlaces externos para cada proyecto. */}
+              <div className="project-links">
+                {project.linkDemo && (
+                  <a href={project.linkDemo} target="_blank" rel="noopener noreferrer" className="project-link-button">
+                    Ver Demo
+                  </a>
+                )}
+                {project.linkGitHub && (
+                  <a href={project.linkGitHub} target="_blank" rel="noopener noreferrer" className="project-link-button secondary">
+                    Ver Código
+                  </a>
+                )}
+              </div>
             </div>
           </motion.div>
         ))}

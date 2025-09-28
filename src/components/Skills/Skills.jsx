@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 // 1. Importo los iconos específicos que necesito de react-icons.
 // Fa = Font Awesome, IoLogo = Ionicons, Di = DevIcons. Hay miles para elegir.
-import { FaReact, FaPython, FaNodeJs, FaHtml5, FaCss3Alt, FaSass } from 'react-icons/fa';
+import { FaReact, FaPython, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGithub, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript, IoLogoVue } from 'react-icons/io5';
 import './Skills.css'; // Crearemos este archivo CSS a continuación.
 
@@ -17,6 +17,8 @@ const skillsData = [
   { name: 'HTML5', icon: <FaHtml5 />, color: '#E34F26' },
   { name: 'CSS3', icon: <FaCss3Alt />, color: '#1572B6' },
   { name: 'Sass', icon: <FaSass />, color: '#CC6699' },
+  { name: 'GitHub', icon: <FaGithub />, color: '#181717' },
+  { name: 'Git', icon: <FaGitAlt />, color: '#F05032' },
 ];
 
 // 3. Variantes para la animación de entrada de la cuadrícula de iconos (stagger).

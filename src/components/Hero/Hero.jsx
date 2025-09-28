@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'; // Importa motion de Framer Motion
+import { TypeAnimation } from 'react-type-animation'; // Importa el componente de animación de tipeo
 import './Hero.css';                    // Importa los estilos CSS específicos para Hero
 import profilePic from '../../assets/profile.png'; // Importa la imagen de perfil
 
@@ -32,10 +33,20 @@ const Hero = () => {
         initial="hidden"             // Estado inicial definido por 'hidden'
         animate="visible"            // Estado final definido por 'visible'
       >
-        {/* Cada elemento de texto aplica la variante 'itemVariants' */}
-        <motion.h1 variants={itemVariants} className="hero-title">
-          WEB DEVELOPER
-        </motion.h1>
+        {/* Título con efecto de tipeo */}
+        <motion.div variants={itemVariants} className="hero-title-container">
+          <TypeAnimation
+            sequence={[
+              'DEVELOPER',
+              2000, // Espera 2 segundos
+              '',
+            ]}
+            wrapper="h1"
+            cursor={true}
+            repeat={Infinity}
+            className="hero-title"
+          />
+        </motion.div>
         
         <motion.h2 variants={itemVariants} className="hero-name">
           RUBEN ALBARRACIN

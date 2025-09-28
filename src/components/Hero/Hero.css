@@ -2,61 +2,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6rem 2rem;
-  text-align: center; /* Centrado por defecto para móviles */
+  padding: 4rem 1rem; /* Reducido el padding para móviles */
+  text-align: center;
   min-height: 90vh;
   background-color: var(--dark-blue);
 }
 
-/* Nuevo contenedor para el texto y la imagen, usando flexbox para layout horizontal */
 .hero-content-wrapper {
   display: flex;
-  flex-direction: column; /* Por defecto en columna para móviles */
+  flex-direction: column; /* Apilado vertical para móviles */
   align-items: center;
-  gap: 3rem; /* Espacio entre el texto y la imagen */
+  gap: 2rem; /* Espacio entre texto e imagen */
   max-width: 1200px;
   width: 100%;
 }
 
-@media (min-width: 768px) { /* A partir de tablets, los ponemos en fila */
-  .hero-content-wrapper {
-    flex-direction: row;
-    text-align: left; /* Alineo el texto a la izquierda en pantallas grandes */
-    justify-content: space-around; /* Espacio entre los elementos */
-  }
-}
-
-.hero-text-content { /* Nuevo nombre para el div de texto */
-  max-width: 600px; /* Limito el ancho del texto */
+.hero-text-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido del texto en móvil */
 }
 
 .hero-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Tamaño ajustado para móvil */
   color: var(--yellow);
   letter-spacing: 3px;
   margin-bottom: 0.5rem;
 }
 
+.hero-title-container {
+  min-height: 2.5rem; /* Altura mínima para evitar saltos de layout con la animación */
+}
+
 .hero-name {
-    font-size: 3.5rem;
+    font-size: 2.5rem; /* Tamaño ajustado para móvil */
     color: var(--white);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Tamaño ajustado para móvil */
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-button {
   background-color: var(--yellow);
   color: var(--dark-blue);
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
@@ -65,18 +63,55 @@
   background-color: #d4a237;
 }
 
-/* Estilos para mi contenedor de imagen */
 .hero-image-container {
-  width: 250px; /* Tamaño de la imagen */
-  height: 250px;
-  border-radius: 50%; /* La hago circular */
-  overflow: hidden; /* Corta lo que se salga del círculo */
-  border: 5px solid var(--yellow); /* Un borde con mi color de acento */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Una sombra sutil */
+  width: 200px; /* Imagen más pequeña en móviles */
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--yellow);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .profile-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  object-fit: cover;
+}
+
+/* --- Media Query para Tablets y Escritorio --- */
+@media (min-width: 768px) {
+  .hero-container {
+    padding: 6rem 2rem; /* Padding original para pantallas grandes */
+  }
+
+  .hero-content-wrapper {
+    flex-direction: row; /* Layout horizontal */
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .hero-text-content {
+    align-items: flex-start; /* Alinear texto a la izquierda */
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-title-container {
+    min-height: 3rem;
+  }
+
+  .hero-name {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+  }
+
+  .hero-image-container {
+    width: 250px;
+    height: 250px;
+  }
 }

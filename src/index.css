@@ -3,11 +3,16 @@
   Usamos :root para declarar variables de CSS que podremos reutilizar en
   todos nuestros componentes. Esto facilita mantener una paleta de colores consistente.
 */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 :root {
-  --dark-blue: #223f54; /* Tu color principal oscuro */
-  --yellow: #f6bf4a;     /* Tu color de acento */
+  --dark-blue: #1a202c; /* Un azul/gris oscuro más moderno */
+  --yellow: #f6bf4a;
   --white: #ffffff;
   --black: #000000;
+  --secondary-bg-color: #2d3748; /* Color de fondo para secciones secundarias */
+  --accent-color: #38b2ac; /* Un teal como nuevo color de acento */
+  --text-color-light: #a0aec0; /* Un gris más claro para el texto */
 }
 
 /*
@@ -25,7 +30,11 @@
   Definimos la fuente, el color de fondo principal y el color del texto.
 */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Space Mono', monospace; /* Nueva fuente aplicada */
   background-color: var(--dark-blue);
   color: var(--white);
+}
+
+html {
+  scroll-behavior: smooth;
 }
