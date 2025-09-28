@@ -64,18 +64,22 @@
 }
 
 .hero-image-container {
-  width: 200px; /* Imagen más pequeña en móviles */
-  height: 200px;
+  width: 50vw; /* Use viewport width for responsive scaling */
+  height: 50vw; /* Maintain a square aspect ratio */
+  max-width: 200px; /* Max size for mobile */
+  max-height: 200px; /* Max size for mobile */
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--yellow);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  position: relative; /* Needed for the image aspect ratio trick if I use it */
 }
 
 .profile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center; /* Ensure the center of the image is shown */
 }
 
 /* --- Media Query para Tablets y Escritorio --- */
@@ -111,7 +115,9 @@
   }
 
   .hero-image-container {
-    width: 250px;
-    height: 250px;
+    width: 280px; /* A bit larger on desktops */
+    height: 280px;
+    max-width: 280px;
+    max-height: 280px;
   }
 }

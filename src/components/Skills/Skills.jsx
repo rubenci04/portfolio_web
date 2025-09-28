@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 // Fa = Font Awesome, IoLogo = Ionicons, Di = DevIcons. Hay miles para elegir.
 import { FaReact, FaPython, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGithub, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript, IoLogoVue } from 'react-icons/io5';
+import { SiVisualstudiocode, SiTailwindcss } from 'react-icons/si';
 import './Skills.css'; // Crearemos este archivo CSS a continuación.
 
 // 2. Defino los datos de mis habilidades. Asocio cada habilidad con su icono y color.
@@ -19,6 +20,8 @@ const skillsData = [
   { name: 'Sass', icon: <FaSass />, color: '#CC6699' },
   { name: 'GitHub', icon: <FaGithub />, color: '#181717' },
   { name: 'Git', icon: <FaGitAlt />, color: '#F05032' },
+  { name: 'VS Code', icon: <SiVisualstudiocode />, color: '#007ACC' },
+  { name: 'TailwindCSS', icon: <SiTailwindcss />, color: '#38B2AC' },
 ];
 
 // 3. Variantes para la animación de entrada de la cuadrícula de iconos (stagger).
