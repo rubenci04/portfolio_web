@@ -3,6 +3,12 @@
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import './Projects.css';
+import kioscoImg from '../../assets/cards_images/kiosco.png';
+import esteticarsImg from '../../assets/cards_images/esteticars.png';
+import donenriqueImg from '../../assets/cards_images/donenrique.png';
+import appPythonImg from '../../assets/cards_images/app-python.png';
+import tejidoImg from '../../assets/cards_images/tejido.png';
+import portfolioImg from '../../assets/cards_images/portfolio.png';
 
 // --- Mis notas sobre los datos del proyecto ---
 // 2. Aquí defino la info de mis proyectos. Es clave que reemplace los enlaces de ejemplo
@@ -13,7 +19,7 @@ const projectsData = [
     title: 'App Ventas y Gestion de Kiosco',
     description: 'Sistema integral de gestión para kioscos, desarrollado con React y Node.js. Permite la toma de pedidos en línea, administración de inventario y seguimiento de ventas. Una solución completa para optimizar la operación de pequeños comercios.',
     technologies: ['React', 'Node.js', 'MongoDB'],
-    imageUrl: 'https://via.placeholder.com/400x250.png?text=Gestion+Kiosco',
+    imageUrl: kioscoImg,
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://buchigestionkiosco.onrender.com/auth/login'
   },
@@ -22,7 +28,7 @@ const projectsData = [
     title: 'Esteticars Monteros',
     description: 'Landing page moderna y atractiva para un centro de estética vehicular, construida con React. Su diseño responsive garantiza una experiencia de usuario óptima en cualquier dispositivo, presentando los servicios de forma clara y profesional.',
     technologies: ['React', 'JavaScript', 'CSS'],
-    imageUrl: 'https://via.placeholder.com/400x250.png?text=Esteticars+Monteros',
+    imageUrl: esteticarsImg,
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://esteticars-monteros.vercel.app/'
   },
@@ -31,7 +37,7 @@ const projectsData = [
     title: 'Don Enrique Web',
     description: 'Sitio web para un emprendimiento local, desarrollado con Vue.js. Demuestra mi capacidad para construir interfaces dinámicas y reactivas, adaptándome a diferentes frameworks de JavaScript para entregar soluciones a medida.',
     technologies: ['Vue.js', 'JavaScript', 'Sass'],
-    imageUrl: 'https://via.placeholder.com/400x250.png?text=Don+Enrique+Web',
+    imageUrl: donenriqueImg,
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://donenriqueweb.netlify.app'
   },
@@ -40,7 +46,7 @@ const projectsData = [
     title: 'App Python',
     description: 'Aplicación de escritorio creada con Python y la librería Tkinter. Este proyecto demuestra mis habilidades en el desarrollo de software de escritorio y mi conocimiento del lenguaje Python más allá del desarrollo web.',
     technologies: ['Python', 'Tkinter'],
-    imageUrl: 'https://via.placeholder.com/400x250.png?text=App+Python',
+    imageUrl: appPythonImg,
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://trinket.io/pygame/64ac6336fa4c?showInstructions=true'
   },
@@ -49,7 +55,7 @@ const projectsData = [
     title: 'Emprendimiento de Tejido',
     description: 'E-commerce en desarrollo para un emprendimiento de tejidos a crochet. El proyecto incluirá un catálogo de productos, carrito de compras y pasarela de pagos, demostrando mi capacidad para construir soluciones de comercio electrónico completas.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-    imageUrl: 'https://via.placeholder.com/400x250.png?text=E-commerce+Tejido',
+    imageUrl: tejidoImg,
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: ''
   },
@@ -58,7 +64,7 @@ const projectsData = [
     title: 'Portfolio Actual',
     description: 'Mi portfolio personal, donde aplico las mejores prácticas de desarrollo frontend. Construido con React y Vite, y estilizado con CSS puro y animaciones con Framer Motion, este proyecto es una demostración de mis habilidades en la creación de interfaces de usuario modernas y atractivas.',
     technologies: ['React', 'Vite', 'CSS', 'Framer Motion'],
-    imageUrl: 'https://via.placeholder.com/400x250.png?text=Mi+Portfolio',
+    imageUrl: portfolioImg,
     linkGitHub: 'https://github.com/rubenci04',
     linkDemo: 'https://portfoliorubenweb.netlify.app'
   }
