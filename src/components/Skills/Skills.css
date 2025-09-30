@@ -2,7 +2,7 @@
 
 .skills-container {
   padding: 4rem 2rem;
-  background-color: var(--dark-blue); /* Color de fondo consistente */
+  background-color: var(--dark-blue);
   text-align: center;
 }
 
@@ -12,7 +12,6 @@
   margin-bottom: 3rem;
 }
 
-/* 1. Cuadrícula para los iconos */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -21,24 +20,35 @@
   margin: 0 auto;
 }
 
-/* 2. Estilo de cada tarjeta de habilidad individual */
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #1d3549; /* Fondo de tarjeta slightly lighter */
+  background-color: #1d3549;
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid transparent; /* Borde inicial transparente */
+  border: 1px solid transparent;
   transition: border-color 0.3s ease;
 }
 
-/* 3. Estilo del icono en sí (tamaño) */
+/* --- MI NOTA: CORRECCIÓN CLAVE AQUÍ --- */
+/* Le doy un tamaño explícito al contenedor del icono. */
 .skill-icon {
-  font-size: 4rem; /* Tamaño grande para el logo */
+  width: 4rem;  /* Ancho fijo */
+  height: 4rem; /* Alto fijo */
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Y me aseguro de que el SVG llene ese contenedor. */
+.skill-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
 
 .skill-name {
   font-size: 1rem;
@@ -46,7 +56,6 @@
   color: var(--white);
 }
 
-/* Opcional: Borde de color al hacer hover (complementa la animación de framer-motion) */
 .skill-item:hover {
   border-color: var(--yellow);
 }
