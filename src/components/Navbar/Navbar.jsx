@@ -22,7 +22,7 @@ const Navbar = () => {
       <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
         <li><a href="#about" onClick={toggleMobileMenu}>Sobre Mí</a></li>
         <li><a href="#projects" onClick={toggleMobileMenu}>Proyectos</a></li>
-        <li><a href="#contact" onClick={toggleMobileMenu}>Contacto</a></li>
+        <li><a href="#contact-form" onClick={toggleMobileMenu}>Contacto</a></li>
       </ul>
 
       <div className="hamburger-menu" onClick={toggleMobileMenu}>
