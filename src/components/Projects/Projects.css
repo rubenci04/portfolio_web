@@ -40,7 +40,7 @@
 
 .project-card:hover {
   box-shadow: 0 0 25px rgba(246, 191, 74, 0.4);
-  border-color: var(--yellow);
+  border-color: var(--accent-color);
 }
 
 /* ✅ Contenedor de imagen mejorado */
@@ -95,14 +95,14 @@
 }
 
 .tech-tag {
-  background-color: rgba(246, 191, 74, 0.15);
-  color: var(--yellow);
+  background-color: rgba(255, 193, 7, 0.15);
+  color: var(--accent-color);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
   cursor: default;
-  border: 1px solid rgba(246, 191, 74, 0.3);
+  border: 1px solid rgba(255, 193, 7, 0.3);
 }
 
 /* ✅ Botones de enlaces */
@@ -116,14 +116,15 @@
 
 .project-link-button {
   padding: 0.7rem 1.2rem;
-  background-color: var(--yellow);
-  color: var(--dark-blue);
+  background-color: var(--accent-color);
+  color: var(--text-color-dark);
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   font-size: 0.9rem;
   transition: all 0.2s ease;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-link-button.secondary {
@@ -135,7 +136,7 @@
 .project-link-button:hover {
   transform: translateY(-2px);
   filter: brightness(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* ✅ Botón de GitHub principal */
@@ -162,7 +163,7 @@
 
 .main-github-button:hover {
   background: rgba(31, 41, 55, 1);
-  border-color: var(--yellow);
+  border-color: var(--accent-color);
 }
 
 /* ✅ Tablets (768px+) */

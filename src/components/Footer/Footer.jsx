@@ -15,8 +15,7 @@ const Footer = () => {
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (
-    <footer className="footer-container">
-      {/* 4. Contenedor para los iconos de redes sociales. */}
+    <footer id="contact" className="footer-container">      {/* 4. Contenedor para los iconos de redes sociales. */}
       <div className="footer-social-links">
         <a 
           href={githubUrl} 
