@@ -6,13 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --dark-blue: #1a202c; /* Un azul/gris oscuro más moderno */
-  --yellow: #f6bf4a;
-  --white: #ffffff;
-  --black: #000000;
-  --secondary-bg-color: #2d3748; /* Color de fondo para secciones secundarias */
-  --accent-color: #38b2ac; /* Un teal como nuevo color de acento */
-  --text-color-light: #a0aec0; /* Un gris más claro para el texto */
+  /* Paleta de Colores Principal */
+  --primary-bg-color: #121F35;      /* Azul oscuro principal para fondos */
+  --secondary-bg-color: #1A2B43;    /* Azul más claro para secciones o tarjetas */
+  --accent-color: #FFC107;          /* Amarillo vibrante para acentos (botones, hovers) */
+  --text-color-light: #E0E0E0;      /* Texto claro para contraste sobre fondos oscuros */
+  --text-color-dark: #121F35;       /* Texto oscuro para contraste sobre fondos claros */
+  --white: #FFFFFF;
+
+  /* Variables del tema anterior (ahora unificadas) */
+  /* --dark-blue: #1a202c; */       /* Reemplazado por --primary-bg-color */
+  /* --yellow: #f6bf4a; */          /* Reemplazado por --accent-color */
 }
 
 /*
@@ -30,9 +34,9 @@
   Definimos la fuente, el color de fondo principal y el color del texto.
 */
 body {
-  font-family: 'Space Mono', monospace; /* Nueva fuente aplicada */
-  background-color: var(--dark-blue);
-  color: var(--white);
+  font-family: 'Space Mono', monospace;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color-light);
 }
 
 html {
