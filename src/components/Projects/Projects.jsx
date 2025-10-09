@@ -70,9 +70,33 @@ const projectsData = [
   }
 ];
 
+// --- Mis notas sobre las variantes de animación ---
+// 3. Defino todas las animaciones que usaré en el componente.
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+};
+
+const cardVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: { y: 0, opacity: 1 }
+};
+
 const titleVariants = {
   hidden: { y: -30, opacity: 0 },
   visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } }
+};
+
+const techTagVariants = {
+  hover: {
+    scale: 1.1,
+    backgroundColor: 'var(--accent-color)', // Uso las variables de color globales
+    color: 'var(--primary-bg-color)',
+    transition: { duration: 0.2 }
+  }
 };
 
 // --- Componente Projects ---
@@ -81,19 +105,27 @@ const Projects = () => {
     <section id="projects" className="projects-container">
       {/* 4. Aplico la animación al título de la sección. */}
       <motion.h2
-        className="projects-title"
         variants={titleVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        animate="visible"
       >
         Mis Proyectos
       </motion.h2>
 
       {/* 5. Contenedor de la cuadrícula con animación stagger para las tarjetas. */}
-      <div className="projects-grid">
+      <motion.div
+        className="projects-grid"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {projectsData.map((project) => (
-          <div key={project.id} className="project-card">
+          <motion.div
+            key={project.id}
+            className="project-card"
+            variants={cardVariants}
+            whileHover={{ scale: 1.03, y: -5 }}
+          >
             <div className="project-image-container">
               <img src={project.imageUrl} alt={`Miniatura del proyecto ${project.title}`} className="project-image" />
             </div>
@@ -103,9 +135,14 @@ const Projects = () => {
 
               <div className="project-technologies">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="tech-tag">
+                  <motion.span
+                    key={i}
+                    className="tech-tag"
+                    variants={techTagVariants}
+                    whileHover="hover"
+                  >
                     {tech}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
 
@@ -123,17 +160,16 @@ const Projects = () => {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* 7. Botón final para enlazar a mi perfil completo de GitHub. */}
       <motion.div
         className="github-profile-link"
         initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        viewport={{ once: true, amount: 0.1 }}
       >
         <motion.a
           href="https://github.com/RubenAlbarracin" // ¡Mi URL de perfil de GitHub real!
