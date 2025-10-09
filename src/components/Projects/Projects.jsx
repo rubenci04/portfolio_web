@@ -70,33 +70,9 @@ const projectsData = [
   }
 ];
 
-// --- Mis notas sobre las variantes de animación ---
-// 3. Defino todas las animaciones que usaré en el componente.
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
-};
-
-const cardVariants = {
-  hidden: { y: 30, opacity: 0 },
-  visible: { y: 0, opacity: 1 }
-};
-
 const titleVariants = {
   hidden: { y: -30, opacity: 0 },
   visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } }
-};
-
-const techTagVariants = {
-  hover: {
-    scale: 1.1,
-    backgroundColor: 'var(--accent-color)', // Uso las variables de color globales
-    color: 'var(--primary-bg-color)',
-    transition: { duration: 0.2 }
-  }
 };
 
 // --- Componente Projects ---
@@ -115,20 +91,9 @@ const Projects = () => {
       </motion.h2>
 
       {/* 5. Contenedor de la cuadrícula con animación stagger para las tarjetas. */}
-      <motion.div
-        className="projects-grid"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-      >
+      <div className="projects-grid">
         {projectsData.map((project) => (
-          <motion.div
-            key={project.id}
-            className="project-card"
-            variants={cardVariants}
-            whileHover={{ scale: 1.03, y: -5 }}
-          >
+          <div key={project.id} className="project-card">
             <div className="project-image-container">
               <img src={project.imageUrl} alt={`Miniatura del proyecto ${project.title}`} className="project-image" />
             </div>
@@ -138,14 +103,9 @@ const Projects = () => {
 
               <div className="project-technologies">
                 {project.technologies.map((tech, i) => (
-                  <motion.span
-                    key={i}
-                    className="tech-tag"
-                    variants={techTagVariants}
-                    whileHover="hover"
-                  >
+                  <span key={i} className="tech-tag">
                     {tech}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
 
@@ -163,9 +123,9 @@ const Projects = () => {
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
 
       {/* 7. Botón final para enlazar a mi perfil completo de GitHub. */}
       <motion.div
