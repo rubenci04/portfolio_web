@@ -109,7 +109,7 @@ const Projects = () => {
         variants={titleVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         Mis Proyectos
       </motion.h2>
@@ -120,7 +120,7 @@ const Projects = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         {projectsData.map((project) => (
           <motion.div
@@ -173,7 +173,7 @@ const Projects = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <motion.a
           href="https://github.com/RubenAlbarracin" // ¡Mi URL de perfil de GitHub real!
