@@ -105,11 +105,9 @@ const Projects = () => {
     <section id="projects" className="projects-container">
       {/* 4. Aplico la animación al título de la sección. */}
       <motion.h2
-        className="projects-title"
         variants={titleVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        animate="visible"
       >
         Mis Proyectos
       </motion.h2>
@@ -119,8 +117,7 @@ const Projects = () => {
         className="projects-grid"
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        animate="visible"
       >
         {projectsData.map((project) => (
           <motion.div
@@ -171,9 +168,8 @@ const Projects = () => {
       <motion.div
         className="github-profile-link"
         initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
       >
         <motion.a
           href="https://github.com/RubenAlbarracin" // ¡Mi URL de perfil de GitHub real!

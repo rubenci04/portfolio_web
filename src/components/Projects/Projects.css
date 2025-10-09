@@ -1,7 +1,8 @@
 /* --- Projects.css - MEJORADO Y RESPONSIVE --- */
 
 .projects-container {
-  padding: 3rem 1rem;
+  /* Se ajusta el padding para que la sección tenga su propio espacio */
+  padding: 3rem 2rem; 
   background-color: transparent;
   text-align: center;
   position: relative;
@@ -21,7 +22,6 @@
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 /* ✅ Tarjetas de proyecto mejoradas */
@@ -178,7 +178,7 @@
   }
 
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
   }
 
@@ -207,7 +207,7 @@
 /* ✅ Desktop grande (1024px+) */
 @media (min-width: 1024px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

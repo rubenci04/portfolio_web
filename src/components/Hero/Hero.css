@@ -4,7 +4,7 @@
   align-items: center;
   padding: 4rem 1rem;
   text-align: center;
-  min-height: 90vh;
+  min-height: auto;
   /* --- CAMBIO CLAVE --- */
   /* Se elimina el color de fondo para que se vea el fondo de partículas */
   background-color: transparent; 
